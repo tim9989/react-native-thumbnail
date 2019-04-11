@@ -23,7 +23,6 @@ RCT_EXPORT_METHOD(get:(NSString *)filepath resolve:(RCTPromiseResolveBlock)resol
         AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:vidURL options:nil];
         AVAssetImageGenerator *generator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
         generator.appliesPreferredTrackTransform = YES;
-        generator.maximumSize = CGSizeMake(480, 480);
         
         NSError *err = NULL;
         CMTime time = CMTimeMake(1, 60);
